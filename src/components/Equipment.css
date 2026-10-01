@@ -1,0 +1,185 @@
+.equipment-section {
+  position: relative;
+  background: rgba(6, 13, 24, 0.6);
+}
+
+.equipment-header-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.equipment-intro {
+  color: var(--royal-text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.equipment-intro strong {
+  color: var(--royal-gold-light);
+}
+
+.equipment-guarantee-badge {
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.shield-icon {
+  color: var(--royal-gold);
+  flex-shrink: 0;
+}
+
+.guarantee-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--royal-gold-light);
+  margin-bottom: 0.25rem;
+}
+
+.guarantee-desc {
+  font-size: 0.88rem;
+  color: var(--royal-text-secondary);
+  line-height: 1.5;
+}
+
+.equipment-showcase-container {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 3rem;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.equipment-banner-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+}
+
+.equipment-showcase-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(8, 16, 30, 0.95) 85%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.showcase-tag {
+  color: var(--royal-gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.showcase-heading {
+  font-size: 1.6rem;
+  color: var(--royal-text-primary);
+  max-width: 600px;
+}
+
+.equipment-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+.equipment-card {
+  padding: 2rem 1.65rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.equip-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.equip-icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--royal-gold);
+}
+
+.equip-num {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.equip-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--royal-text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.equip-card-subtitle {
+  font-size: 0.78rem;
+  color: var(--royal-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.85rem;
+  display: block;
+}
+
+.equip-card-desc {
+  font-size: 0.9rem;
+  color: var(--royal-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.equip-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  color: var(--royal-text-muted);
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 900px) {
+  .equipment-header-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .equipment-banner-img {
+    height: 300px;
+  }
+
+  .equipment-showcase-overlay {
+    padding: 1.5rem;
+  }
+
+  .showcase-heading {
+    font-size: 1.25rem;
+  }
+}
