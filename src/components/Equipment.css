@@ -1,29 +1,21 @@
-.equipment-section {
+.equipment-dark-section {
   position: relative;
-  background: rgba(6, 13, 24, 0.6);
+  background: radial-gradient(circle at 70% 30%, #122442 0%, #07101F 60%, #050B14 100%);
+  padding: 7rem 0;
+  border-bottom: 1px solid rgba(197, 160, 71, 0.2);
 }
 
-.equipment-header-grid {
+.equipment-top-header {
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
   align-items: center;
-  gap: 3rem;
+  gap: 3.5rem;
   margin-bottom: 3.5rem;
 }
 
-.equipment-intro {
-  color: var(--royal-text-secondary);
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-.equipment-intro strong {
-  color: var(--royal-gold-light);
-}
-
-.equipment-guarantee-badge {
-  background: rgba(212, 175, 55, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+.equipment-cert-badge {
+  background: rgba(197, 160, 71, 0.1);
+  border: 1px solid rgba(197, 160, 71, 0.35);
   border-radius: var(--radius-md);
   padding: 1.5rem;
   display: flex;
@@ -31,115 +23,127 @@
   gap: 1.25rem;
 }
 
-.shield-icon {
-  color: var(--royal-gold);
+.cert-shield-icon {
+  color: var(--royal-gold-300);
   flex-shrink: 0;
 }
 
-.guarantee-title {
+.cert-badge-title {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.05rem;
-  color: var(--royal-gold-light);
-  margin-bottom: 0.25rem;
+  color: #FFFFFF;
+  margin-bottom: 0.3rem;
 }
 
-.guarantee-desc {
-  font-size: 0.88rem;
-  color: var(--royal-text-secondary);
+.cert-badge-sub {
+  font-size: 0.86rem;
+  color: #94A3B8;
   line-height: 1.5;
 }
 
-.equipment-showcase-container {
+.equipment-main-banner {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
   margin-bottom: 3rem;
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(197, 160, 71, 0.3);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
 }
 
-.equipment-banner-img {
+.equipment-banner-image {
   width: 100%;
   height: 440px;
   object-fit: cover;
   display: block;
 }
 
-.equipment-showcase-overlay {
+.equipment-banner-scrim {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 2.5rem;
-  background: linear-gradient(180deg, transparent 0%, rgba(8, 16, 30, 0.95) 85%);
+  background: linear-gradient(180deg, transparent 0%, rgba(5, 11, 20, 0.95) 80%);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
-.showcase-tag {
-  color: var(--royal-gold);
-  font-size: 0.85rem;
+.banner-small-tag {
+  color: var(--royal-gold-300);
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
-.showcase-heading {
+.banner-large-title {
   font-size: 1.6rem;
-  color: var(--royal-text-primary);
+  color: #FFFFFF;
   max-width: 600px;
 }
 
-.equipment-cards-grid {
+.equipment-grid-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.75rem;
 }
 
-.equipment-card {
+.equip-tech-card {
+  background: rgba(14, 28, 54, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(197, 160, 71, 0.2);
+  border-radius: var(--radius-md);
   padding: 2rem 1.65rem;
   display: flex;
   flex-direction: column;
+  transition: var(--transition-normal);
 }
 
-.equip-top {
+.equip-tech-card:hover {
+  transform: translateY(-5px);
+  background: rgba(18, 36, 68, 0.9);
+  border-color: rgba(197, 160, 71, 0.55);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+}
+
+.equip-card-top-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1.25rem;
 }
 
-.equip-icon-wrap {
-  width: 50px;
-  height: 50px;
+.equip-icon-box {
+  width: 48px;
+  height: 48px;
   border-radius: 12px;
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(197, 160, 71, 0.14);
+  border: 1px solid rgba(197, 160, 71, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--royal-gold);
+  color: var(--royal-gold-300);
 }
 
-.equip-num {
+.equip-digit {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.15);
 }
 
-.equip-card-title {
+.equip-title {
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--royal-text-primary);
+  color: #FFFFFF;
   margin-bottom: 0.35rem;
 }
 
-.equip-card-subtitle {
-  font-size: 0.78rem;
-  color: var(--royal-gold);
+.equip-subtitle {
+  font-size: 0.76rem;
+  color: var(--royal-gold-300);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -147,39 +151,39 @@
   display: block;
 }
 
-.equip-card-desc {
+.equip-desc {
   font-size: 0.9rem;
-  color: var(--royal-text-secondary);
+  color: #94A3B8;
   line-height: 1.6;
   margin-bottom: 1.25rem;
 }
 
-.equip-badge-row {
+.equip-footer-status {
   display: flex;
   align-items: center;
   gap: 0.45rem;
-  font-size: 0.8rem;
-  color: var(--royal-text-muted);
+  font-size: 0.78rem;
+  color: #CBD5E1;
   margin-top: auto;
   padding-top: 0.85rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 @media (max-width: 900px) {
-  .equipment-header-grid {
+  .equipment-top-header {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .equipment-banner-img {
+  .equipment-banner-image {
     height: 300px;
   }
 
-  .equipment-showcase-overlay {
+  .equipment-banner-scrim {
     padding: 1.5rem;
   }
 
-  .showcase-heading {
+  .banner-large-title {
     font-size: 1.25rem;
   }
 }

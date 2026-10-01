@@ -5,69 +5,77 @@ import './WhyUs.css';
 export const WhyUs: React.FC = () => {
   const reasons = [
     {
-      icon: <UserCheck size={32} className="why-icon" />,
+      icon: <UserCheck size={28} />,
       title: 'Personal Capacitado y de Confianza',
       description:
-        'Personal seleccionado con riguroso filtro de antecedentes, uniformado e instruido en técnicas avanzadas de desinfección y cortesía profesional.',
-      highlight: '100% de confianza',
+        'Personal rigurosamente seleccionado con verificación de antecedentes, presentación impecable y continua capacitación en técnicas de desinfección.',
+      highlight: '100% Verificado',
+      badgeColor: 'gold',
     },
     {
-      icon: <Sparkles size={32} className="why-icon" />,
-      title: 'Productos y Equipos Profesionales',
+      icon: <Sparkles size={28} />,
+      title: 'Equipos y Químicos Profesionales',
       description:
-        'Maquinaria industrial de última tecnología (inyección-extracción profunda, pulidoras y aspiradoras de alto rendimiento) y químicos biodegradables certificados.',
-      highlight: 'Grado comercial',
+        'Maquinaria industrial de última generación (extracción profunda, rotativas para abrillantado) y químicos biodegradables certificados que no dañan las fibras.',
+      highlight: 'Grado Industrial',
+      badgeColor: 'blue',
     },
     {
-      icon: <SearchCheck size={32} className="why-icon" />,
+      icon: <SearchCheck size={28} />,
       title: 'Limpieza Profunda y Detallada',
       description:
-        'No nos quedamos en lo visible. Llegamos a rincones difíciles, zócalos y fibras textiles para eliminar polvo invisible, manchas, ácaros y gérmenes.',
-      highlight: '99.9% higienizado',
+        'No nos limitamos a lo superficial. Tratamos zócalos, ranuras, esquinas y microfibras eliminando hasta el 99.9% de gérmenes, ácaros y alérgenos.',
+      highlight: '99.9% Desinfección',
+      badgeColor: 'emerald',
     },
     {
-      icon: <ClipboardCheck size={32} className="why-icon" />,
+      icon: <ClipboardCheck size={28} />,
       title: 'Supervisión Constante de Calidad',
       description:
-        'Cada servicio es auditado por supervisores dedicados bajo estrictas listas de chequeo antes de la conformidad del cliente.',
-      highlight: 'Estándar 5 estrellas',
+        'Cada servicio cuenta con un líder o supervisor que audita una estricta lista de chequeo antes de solicitar la conformidad del cliente.',
+      highlight: 'Control 5 Estrellas',
+      badgeColor: 'gold',
     },
     {
-      icon: <CalendarClock size={32} className="why-icon" />,
+      icon: <CalendarClock size={28} />,
       title: 'Flexibilidad de Horarios y Planes',
       description:
-        'Diseñamos esquemas a la medida de su empresa u hogar: jornadas diarias, semanales, quincenales o mensuales en turnos que no interrumpan su rutina.',
-      highlight: 'A su medida',
+        'Diseñamos soluciones que se adaptan a su ritmo: jornadas diarias, semanales, quincenales o mensuales en turnos diurnos o nocturnos sin interrumpir su actividad.',
+      highlight: 'Planes a Medida',
+      badgeColor: 'blue',
     },
   ];
 
   return (
-    <section id="por-que-nosotros" className="why-section section-padding">
+    <section id="por-que-nosotros" className="why-section">
       <div className="container">
-        <div className="section-header">
-          <div className="badge-tag">
-            <ShieldCheck size={16} />
+        <div className="section-header-dark">
+          <div className="badge-tag-dark">
+            <ShieldCheck size={15} />
             <span>VENTAJAS COMPETITIVAS</span>
           </div>
-          <h2 className="section-title">
+          <h2 className="title-dark">
             ¿Por Qué Elegir <span className="gold-gradient-text">Royal Wash</span>?
           </h2>
-          <p className="section-subtitle">
-            Garantizamos la máxima tranquilidad para su familia y empresa a través de un servicio
-            meticuloso, transparente y respaldado por estándares de excelencia.
+          <p className="subtitle-dark">
+            Garantizamos tranquilidad y espacios impecables con procesos certificados, 
+            maquinaria de última generación y un equipo humano de total confianza.
           </p>
         </div>
 
-        <div className="why-grid">
+        <div className="why-cards-grid">
           {reasons.map((item, index) => (
-            <div key={index} className={`royal-card why-card ${index === 0 ? 'why-card-featured' : ''}`}>
-              <div className="why-card-top">
-                <div className="why-icon-wrapper">{item.icon}</div>
-                <span className="why-highlight-badge">{item.highlight}</span>
+            <div key={index} className={`why-dark-card ${index === 0 ? 'why-card-lead' : ''}`}>
+              <div className="why-header-row">
+                <div className={`why-icon-bubble bubble-${item.badgeColor}`}>
+                  {item.icon}
+                </div>
+                <span className={`why-tag-pill tag-${item.badgeColor}`}>
+                  {item.highlight}
+                </span>
               </div>
-              <h3 className="why-card-title">{item.title}</h3>
-              <p className="why-card-desc">{item.description}</p>
-              <div className="why-card-glow"></div>
+              <h3 className="why-title">{item.title}</h3>
+              <p className="why-description">{item.description}</p>
             </div>
           ))}
         </div>

@@ -1,100 +1,110 @@
 import React from 'react';
-import { Target, Compass, Award, Shield, CheckCircle } from 'lucide-react';
+import { Target, Compass, Award, Shield, CheckCircle, Sparkles } from 'lucide-react';
 import './About.css';
 
 export const About: React.FC = () => {
   return (
-    <section id="nosotros" className="about-section section-padding">
+    <section id="nosotros" className="about-section">
       <div className="container">
-        <div className="about-grid">
-          {/* Visual Side */}
-          <div className="about-visual">
-            <div className="about-image-card">
+        <div className="about-layout-grid">
+          {/* Left Column: Visual Card with Stat Overlays */}
+          <div className="about-image-column">
+            <div className="about-card-frame">
               <img
                 src="/images/about.jpg"
-                alt="Equipo profesional uniformado de Royal Wash"
-                className="about-img"
+                alt="Equipo calificado y uniformado de Royal Wash"
+                className="about-primary-img"
               />
-              <div className="about-stats-banner">
-                <div className="stat-box">
-                  <span className="stat-number gold-gradient-text">100%</span>
-                  <span className="stat-label">Personal Verificado & Confiable</span>
+              
+              {/* Floating Quality Tag */}
+              <div className="about-floating-stamp">
+                <Sparkles size={20} className="stamp-icon" />
+                <div>
+                  <span className="stamp-title">Estándar 5 Estrellas</span>
+                  <span className="stamp-desc">Supervisión en cada servicio</span>
                 </div>
-                <div className="stat-divider"></div>
-                <div className="stat-box">
-                  <span className="stat-number gold-gradient-text">5★</span>
-                  <span className="stat-label">Estándar de Calidad Premium</span>
+              </div>
+
+              {/* Bottom Stat Card */}
+              <div className="about-glass-stats">
+                <div className="stat-unit">
+                  <span className="stat-num">100%</span>
+                  <span className="stat-text">Personal Verificado & Asegurado</span>
+                </div>
+                <div className="stat-sep"></div>
+                <div className="stat-unit">
+                  <span className="stat-num">+9</span>
+                  <span className="stat-text">Servicios Especializados</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Text Content */}
-          <div className="about-content">
-            <div className="badge-tag">
-              <Award size={16} />
+          {/* Right Column: Editorial Copy */}
+          <div className="about-text-column">
+            <div className="about-pill-badge">
+              <Award size={15} />
               <span>QUIÉNES SOMOS</span>
             </div>
 
-            <h2 className="section-title">
-              Pasión por la Limpieza, <br />
-              <span className="gold-gradient-text">Compromiso con su Bienestar</span>
+            <h2 className="about-main-title">
+              Pasión por la Higiene, <br />
+              <span className="gold-text-accent">Compromiso con su Tranquilidad</span>
             </h2>
 
-            <p className="about-lead">
-              En <strong>Royal Wash</strong> nos dedicamos a transformar espacios para que personas y empresas
-              vivan y trabajen en ambientes higiénicos, saludables y visualmente impecables.
+            <p className="about-lead-paragraph">
+              En <strong>Royal Wash</strong> nos dedicamos a transformar espacios para que familias 
+              y equipos de trabajo convivan en entornos verdaderamente higiénicos, saludables y visualmente impecables.
             </p>
 
-            <p className="about-paragraph">
+            <p className="about-secondary-paragraph">
               Entendemos que la limpieza no es un simple gasto, sino una inversión fundamental en salud,
-              imagen corporativa y productividad. Por eso, combinamos técnicos altamente capacitados,
-              maquinaria especializada y productos ecológicos que garantizan resultados de alto impacto.
+              imagen corporativa y productividad. Combinamos personal altamente instruido con maquinaria 
+              de inyección-extracción y químicos biodegradables certificados que cuidan sus activos más valiosos.
             </p>
 
-            {/* Mission & Vision Cards */}
-            <div className="mission-vision-cards">
-              <div className="royal-card mv-card">
-                <div className="mv-icon-box">
-                  <Target size={24} className="gold-icon" />
+            {/* Mission & Vision in Clean White Cards with Gold Trim */}
+            <div className="mv-cards-wrapper">
+              <div className="mv-light-card">
+                <div className="mv-icon-badge">
+                  <Target size={22} />
                 </div>
-                <div>
-                  <h3 className="mv-title">Nuestra Misión</h3>
-                  <p className="mv-desc">
-                    Brindar servicios de limpieza y desinfección de la más alta calidad, superando las
-                    expectativas de nuestros clientes corporativos y residenciales con procesos
-                    estandarizados y tecnología de vanguardia.
+                <div className="mv-text-body">
+                  <h3 className="mv-heading">Nuestra Misión</h3>
+                  <p className="mv-detail">
+                    Brindar soluciones de limpieza y desinfección de la más alta calidad, superando 
+                    las expectativas de nuestros clientes corporativos y residenciales con procesos estandarizados.
                   </p>
                 </div>
               </div>
 
-              <div className="royal-card mv-card">
-                <div className="mv-icon-box">
-                  <Compass size={24} className="gold-icon" />
+              <div className="mv-light-card">
+                <div className="mv-icon-badge">
+                  <Compass size={22} />
                 </div>
-                <div>
-                  <h3 className="mv-title">Nuestra Visión</h3>
-                  <p className="mv-desc">
-                    Ser la empresa referente y de máxima confianza en el rubro de la limpieza integral,
-                    reconocida por su puntualidad, ética, excelencia operativa y la satisfacción plena de nuestros clientes.
+                <div className="mv-text-body">
+                  <h3 className="mv-heading">Nuestra Visión</h3>
+                  <p className="mv-detail">
+                    Ser la empresa referente y de máxima confianza en Bolivia en limpieza integral, 
+                    reconocida por su puntualidad, ética, acabados de primera y satisfacción garantizada.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Quick checkmarks */}
-            <div className="about-checks">
-              <div className="about-check-item">
-                <CheckCircle size={18} color="#D4AF37" />
-                <span>Protocolos rigurosos de bioseguridad</span>
+            {/* Checkmark List */}
+            <div className="about-benefits-row">
+              <div className="benefit-pill">
+                <CheckCircle size={16} className="benefit-icon" />
+                <span>Protocolos de bioseguridad</span>
               </div>
-              <div className="about-check-item">
-                <CheckCircle size={18} color="#D4AF37" />
-                <span>Atención personalizada y flexible</span>
+              <div className="benefit-pill">
+                <CheckCircle size={16} className="benefit-icon" />
+                <span>Planes a medida y flexibles</span>
               </div>
-              <div className="about-check-item">
-                <Shield size={18} color="#D4AF37" />
-                <span>Seguro y supervisión activa en sitio</span>
+              <div className="benefit-pill">
+                <Shield size={16} className="benefit-icon" />
+                <span>Supervisión activa en sitio</span>
               </div>
             </div>
           </div>

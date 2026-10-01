@@ -1,0 +1,110 @@
+.process-section {
+  position: relative;
+  background: #FFFFFF;
+  padding: 6.5rem 0;
+  border-bottom: 1px solid rgba(10, 22, 43, 0.08);
+}
+
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  position: relative;
+}
+
+.process-step-card {
+  background: #F8FAFD;
+  border: 1px solid rgba(10, 22, 43, 0.08);
+  border-radius: var(--radius-md);
+  padding: 2.2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: var(--transition-normal);
+}
+
+.process-step-card:hover {
+  transform: translateY(-5px);
+  background: #FFFFFF;
+  border-color: rgba(197, 160, 71, 0.4);
+  box-shadow: 0 16px 36px -10px rgba(10, 22, 43, 0.1);
+}
+
+.process-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.process-num-badge {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #96741E;
+  line-height: 1;
+}
+
+.process-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(10, 22, 43, 0.05);
+  color: var(--royal-navy-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-normal);
+}
+
+.process-step-card:hover .process-icon-wrap {
+  background: var(--royal-gold-gradient);
+  color: #0B1526;
+}
+
+.process-step-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--text-dark-primary);
+  margin-bottom: 0.65rem;
+}
+
+.process-step-desc {
+  font-size: 0.9rem;
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+.process-step-connector {
+  position: absolute;
+  top: 50%;
+  right: -1.1rem;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid rgba(197, 160, 71, 0.3);
+  color: #96741E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 1024px) {
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-step-connector {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+  }
+}

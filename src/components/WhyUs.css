@@ -1,91 +1,116 @@
 .why-section {
   position: relative;
-  background: radial-gradient(circle at 50% 50%, rgba(26, 58, 107, 0.15) 0%, transparent 80%);
+  background: radial-gradient(circle at 50% 0%, #112344 0%, #081427 60%, #050B14 100%);
+  padding: 7rem 0;
+  border-bottom: 1px solid rgba(197, 160, 71, 0.2);
 }
 
-.why-grid {
+.why-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.75rem;
+  gap: 2rem;
 }
 
-.why-card {
-  padding: 2.2rem 1.85rem;
+.why-dark-card {
+  background: rgba(14, 28, 54, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(197, 160, 71, 0.2);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 2rem;
   display: flex;
   flex-direction: column;
+  transition: var(--transition-normal);
   position: relative;
 }
 
-.why-card-featured {
-  border-color: rgba(212, 175, 55, 0.4);
-  background: rgba(20, 38, 70, 0.7);
+.why-dark-card:hover {
+  transform: translateY(-5px);
+  background: rgba(18, 36, 68, 0.9);
+  border-color: rgba(197, 160, 71, 0.55);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 25px rgba(197, 160, 71, 0.2);
 }
 
-.why-card-top {
+.why-card-lead {
+  border-color: rgba(197, 160, 71, 0.45);
+  background: linear-gradient(145deg, rgba(20, 42, 80, 0.8) 0%, rgba(12, 24, 46, 0.9) 100%);
+}
+
+.why-header-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1.5rem;
 }
 
-.why-icon-wrapper {
-  width: 60px;
-  height: 60px;
+.why-icon-bubble {
+  width: 54px;
+  height: 54px;
   border-radius: 14px;
-  background: rgba(212, 175, 55, 0.12);
-  border: 1px solid rgba(212, 175, 55, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition-normal);
 }
 
-.why-card:hover .why-icon-wrapper {
-  background: var(--royal-gold);
-  transform: rotate(5deg) scale(1.08);
+.bubble-gold {
+  background: rgba(197, 160, 71, 0.16);
+  border: 1px solid rgba(197, 160, 71, 0.35);
+  color: var(--royal-gold-300);
 }
 
-.why-icon {
-  color: var(--royal-gold);
-  transition: var(--transition-normal);
+.bubble-blue {
+  background: rgba(56, 189, 248, 0.14);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38BDF8;
 }
 
-.why-card:hover .why-icon {
-  color: #0A1628;
+.bubble-emerald {
+  background: rgba(52, 211, 153, 0.14);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  color: #34D399;
 }
 
-.why-highlight-badge {
-  font-size: 0.75rem;
+.why-dark-card:hover .why-icon-bubble {
+  transform: scale(1.08) rotate(4deg);
+}
+
+.why-tag-pill {
+  font-size: 0.74rem;
   font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.25rem 0.75rem;
+  padding: 0.3rem 0.85rem;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--royal-gold-light);
 }
 
-.why-card-title {
+.tag-gold {
+  background: rgba(197, 160, 71, 0.12);
+  border: 1px solid rgba(197, 160, 71, 0.3);
+  color: var(--royal-gold-300);
+}
+
+.tag-blue {
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #7DD3FC;
+}
+
+.tag-emerald {
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  color: #A7F3D0;
+}
+
+.why-title {
   font-size: 1.25rem;
-  margin-bottom: 0.85rem;
-  color: var(--royal-text-primary);
   font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.85rem;
 }
 
-.why-card-desc {
-  color: var(--royal-text-secondary);
+.why-description {
+  color: #94A3B8;
   font-size: 0.95rem;
   line-height: 1.65;
-  margin-top: auto;
-}
-
-.why-card-glow {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 80px;
-  height: 80px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
-  pointer-events: none;
 }
