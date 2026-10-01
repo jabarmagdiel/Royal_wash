@@ -3,6 +3,7 @@
   background: radial-gradient(circle at 70% 30%, #122442 0%, #07101F 60%, #050B14 100%);
   padding: 7rem 0;
   border-bottom: 1px solid rgba(197, 160, 71, 0.2);
+  color: #FFFFFF;
 }
 
 .equipment-top-header {
@@ -13,9 +14,23 @@
   margin-bottom: 3.5rem;
 }
 
+.equipment-top-header h2 {
+  color: #FFFFFF !important;
+}
+
+.equipment-intro {
+  color: #CBD5E1 !important;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.equipment-intro strong {
+  color: #FFFFFF !important;
+}
+
 .equipment-cert-badge {
-  background: rgba(197, 160, 71, 0.1);
-  border: 1px solid rgba(197, 160, 71, 0.35);
+  background: rgba(197, 160, 71, 0.12);
+  border: 1px solid rgba(197, 160, 71, 0.4);
   border-radius: var(--radius-md);
   padding: 1.5rem;
   display: flex;
@@ -24,7 +39,7 @@
 }
 
 .cert-shield-icon {
-  color: var(--royal-gold-300);
+  color: #E2BE64;
   flex-shrink: 0;
 }
 
@@ -32,14 +47,14 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.05rem;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   margin-bottom: 0.3rem;
 }
 
 .cert-badge-sub {
-  font-size: 0.86rem;
-  color: #94A3B8;
-  line-height: 1.5;
+  font-size: 0.88rem;
+  color: #CBD5E1 !important;
+  line-height: 1.55;
 }
 
 .equipment-main-banner {
@@ -71,7 +86,7 @@
 }
 
 .banner-small-tag {
-  color: var(--royal-gold-300);
+  color: #FDE68A !important;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -79,21 +94,21 @@
 
 .banner-large-title {
   font-size: 1.6rem;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   max-width: 600px;
 }
 
 .equipment-grid-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 1.75rem;
 }
 
 .equip-tech-card {
-  background: rgba(14, 28, 54, 0.65);
+  background: rgba(14, 28, 54, 0.75);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(197, 160, 71, 0.2);
+  border: 1px solid rgba(197, 160, 71, 0.25);
   border-radius: var(--radius-md);
   padding: 2rem 1.65rem;
   display: flex;
@@ -103,8 +118,8 @@
 
 .equip-tech-card:hover {
   transform: translateY(-5px);
-  background: rgba(18, 36, 68, 0.9);
-  border-color: rgba(197, 160, 71, 0.55);
+  background: rgba(18, 36, 68, 0.95);
+  border-color: rgba(197, 160, 71, 0.6);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
 }
 
@@ -119,42 +134,42 @@
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: rgba(197, 160, 71, 0.14);
-  border: 1px solid rgba(197, 160, 71, 0.3);
+  background: rgba(197, 160, 71, 0.18);
+  border: 1px solid rgba(197, 160, 71, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--royal-gold-300);
+  color: #FDE68A;
 }
 
 .equip-digit {
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.3) !important;
 }
 
 .equip-title {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   margin-bottom: 0.35rem;
 }
 
 .equip-subtitle {
   font-size: 0.76rem;
-  color: var(--royal-gold-300);
-  font-weight: 600;
+  color: #FDE68A !important;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   margin-bottom: 0.85rem;
   display: block;
 }
 
 .equip-desc {
-  font-size: 0.9rem;
-  color: #94A3B8;
-  line-height: 1.6;
+  font-size: 0.92rem;
+  color: #CBD5E1 !important;
+  line-height: 1.65;
   margin-bottom: 1.25rem;
 }
 
@@ -162,11 +177,11 @@
   display: flex;
   align-items: center;
   gap: 0.45rem;
-  font-size: 0.78rem;
-  color: #CBD5E1;
+  font-size: 0.8rem;
+  color: #E2E8F0 !important;
   margin-top: auto;
   padding-top: 0.85rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 900px) {

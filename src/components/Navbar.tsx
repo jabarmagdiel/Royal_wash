@@ -26,12 +26,12 @@ export const Navbar: React.FC = () => {
   return (
     <header className={`navbar-wrapper ${isScrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
-        {/* Brand Logo */}
-        <a href="#inicio" className="navbar-brand">
-          <img src="/images/logo.png" alt="Royal Wash Logo" className="navbar-logo-img" />
-          <div className="navbar-brand-text">
-            <span className="brand-name">ROYAL WASH</span>
-            <span className="brand-tagline">SERVICIOS DE LIMPIEZA</span>
+        {/* Brand Official Logo */}
+        <a href="#inicio" className="navbar-brand" aria-label="Royal Wash Inicio">
+          <img src="/images/logo.png" alt="Royal Wash - Empresa de Limpieza" className="navbar-logo-img" />
+          <div className="navbar-brand-col">
+            <span className="brand-title-text">ROYAL WASH</span>
+            <span className="brand-tagline-text">SERVICIOS DE LIMPIEZA</span>
           </div>
         </a>
 
@@ -84,7 +84,7 @@ export const Navbar: React.FC = () => {
             href="https://wa.me/59174933733?text=Hola%20Royal%20Wash,%20deseo%20solicitar%20una%20cotizaci%C3%B3n%20para%20servicios%20de%20limpieza"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary mobile-cta-btn"
+            className="btn-whatsapp mobile-cta-btn"
             onClick={() => setMobileMenuOpen(false)}
           >
             <PhoneCall size={18} />

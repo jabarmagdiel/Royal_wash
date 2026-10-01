@@ -82,7 +82,7 @@
 .hero-clean-word::after {
   content: '';
   position: absolute;
-  bottom: 8px;
+  bottom: -4px;
   left: 0;
   right: 0;
   height: 4px;
@@ -91,7 +91,7 @@
 }
 
 .hero-description {
-  color: #A0AEC0;
+  color: #E2E8F0;
   font-size: 1.12rem;
   line-height: 1.7;
   margin-bottom: 1.85rem;
@@ -360,17 +360,53 @@
   }
 
   .float-top {
-    right: 5px;
+    right: 8px;
+    top: 8px;
   }
 
   .float-bottom {
-    left: 5px;
+    left: 8px;
+    bottom: 8px;
   }
 }
 
 @media (max-width: 600px) {
+  .hero-section {
+    padding: 6.5rem 0 3rem 0;
+  }
+
+  .hero-title {
+    font-size: 2.35rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-main-btn {
+    width: 100%;
+  }
+
+  .btn-secondary-dark {
+    width: 100%;
+  }
+
   .hero-metrics-ribbon {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .hero-float-card {
+    padding: 0.6rem 0.85rem;
+    gap: 0.65rem;
+  }
+
+  .float-card-title {
+    font-size: 0.82rem;
+  }
+
+  .float-card-sub {
+    font-size: 0.7rem;
   }
 }
